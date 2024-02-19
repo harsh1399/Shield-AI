@@ -1,0 +1,30 @@
+{
+    "environment":{
+        "defense1":{"structure":"cannon","position":"top right","level":3,"shotSpeed":3,"hitpoint":500,"damage":30},
+        "defense2":{"structure":"cannon","position":"top left","level":1,"shotSpeed":1},
+        "defense3":{"structure":"cannon","position":"center","level":4,"shotSpeed":4,"damage":35},
+        "defense4":{"structure":"mortar","position":"center","level":2,"hitpoint":400,"damage":20},
+        "defense5":{"structure":"mortar","position":"center","level":1,"hitpoint":200,"damage":10},
+        "defense6":{"structure":"tower","position":"bottom right","level":3,"hitpoint":500,"damage":40},
+        "defense7":{"structure":"tower","position":"bottom left","level":3,"hitpoint":500,"damage":40},
+        "defense8":{"structure":"headquarters","position":"center","hitpoint":300},
+        "defense9":{"structure":"resource","position":"center right","hitpoint":100},
+        "defense10":{"structure":"resource","position":"center top"}
+    },
+    "agents":{
+        "shooters":{"noShooters":20,
+            "behavior": {"firstImpTarget": "CANNON","secondImpTarget": "HEADQUARTERS"}
+        },
+        "tanks":{"noTanks":10,
+            "behavior": {"firstImpTarget": "CANNON","secondImpTarget": "MORTAR"}
+        },
+        "helicopters":{"noHelicopters":3,
+            "behavior": {"firstImpTarget": "TOWER","secondImpTarget": "CANNON"}
+        }
+    },
+    "deployment": {
+        "shootersDeployment": {"firstDepolyment": 5,"firstPosition": "top right","secondDepolyment": 10,"secondPosition": "center right","thirdDepolyment": 5,"thirdPosition": "center left"},
+        "tanksDeployment": {"firstDepolyment": 5,"firstPosition": "center bottom","secondDepolyment": 5,"secondPosition": "center right"},
+        "helicoptersDeployment": {"firstDepolyment": 3,"firstPosition": "bottom left"}
+    }
+}
